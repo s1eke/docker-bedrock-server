@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  bedrock:
+    build: .
+    ports: 
+      - "19132:19132/udp"
+    volumes:
+      - ./server.properties:/apps/bedrock-server/server.properties
+      - ./worlds:/apps/bedrock-server/worlds
